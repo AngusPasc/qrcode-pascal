@@ -16,18 +16,14 @@ type
     Label3: TLabel;
     edtQuietZone: TEdit;
     Label4: TLabel;
-    ButtonSave: TButton;
     Image1: TImage;
     SavePictureDialog1: TSavePictureDialog;
-    CheckBox1: TCheckBox;
-    Label5: TLabel;
     ButtonSaveAs: TButton;
     procedure FormCreate(Sender: TObject);
     procedure edtTextChange(Sender: TObject);
     procedure cmbEncodingChange(Sender: TObject);
     procedure edtQuietZoneChange(Sender: TObject);
     procedure cmbErrorCorrectionLevelChange(Sender: TObject);
-    procedure ButtonSaveClick(Sender: TObject);
     procedure ButtonSaveAsClick(Sender: TObject);
   private
     BMP: TBitmap;
@@ -79,9 +75,6 @@ begin
     BMP := TBitmap.Create;
     try
       QRCode.DrawQrcode(BMP);
-      if CheckBox1.Checked then // Salvar imagem com o path predefinido
-        BMP.SaveToFile('C:\temp.bmp');
-
       Image1.Picture.Bitmap := BMP;
     finally
       BMP.Free;
@@ -89,11 +82,6 @@ begin
   finally
     QRCode.Free;
   end;
-end;
-
-procedure TForm1.ButtonSaveClick(Sender: TObject);
-begin
-  Image1.Picture.SaveToFile('C:\temp2.bmp');
 end;
 
 procedure TForm1.ButtonSaveAsClick(Sender: TObject);

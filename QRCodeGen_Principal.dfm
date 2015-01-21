@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 331
   Top = 214
-  Caption = 'Gerador de QRCode'
+  Caption = 'Generate QRCode'
   ClientHeight = 282
   ClientWidth = 534
   Color = clBtnFace
@@ -22,30 +22,30 @@ object Form1: TForm1
   object Label1: TLabel
     Left = 8
     Top = 13
-    Width = 28
+    Width = 22
     Height = 13
-    Caption = 'Texto'
+    Caption = 'Text'
   end
   object Label2: TLabel
     Left = 8
     Top = 60
-    Width = 55
+    Width = 43
     Height = 13
-    Caption = 'Codifica'#231#227'o'
+    Caption = 'Encoding'
   end
   object Label3: TLabel
     Left = 184
     Top = 60
-    Width = 75
+    Width = 53
     Height = 13
-    Caption = #193'rea de sil'#234'ncio'
+    Caption = 'Quiet Zone'
   end
   object Label4: TLabel
     Left = 296
     Top = 13
-    Width = 41
+    Width = 38
     Height = 13
-    Caption = 'Previs'#227'o'
+    Caption = 'Preview'
   end
   object Image1: TImage
     Left = 295
@@ -53,20 +53,13 @@ object Form1: TForm1
     Width = 128
     Height = 119
   end
-  object Label5: TLabel
-    Left = 31
-    Top = 154
-    Width = 157
-    Height = 13
-    Caption = '* Caminho padr'#227'o: C:\temp.bmp'
-  end
   object edtText: TEdit
     Left = 8
     Top = 32
     Width = 265
     Height = 21
     TabOrder = 0
-    Text = 'ACBr'
+    Text = 'Generate QRCode in object pascal'
     OnChange = edtTextChange
   end
   object cmbEncoding: TComboBox
@@ -96,30 +89,13 @@ object Form1: TForm1
     Text = '4'
     OnChange = edtQuietZoneChange
   end
-  object ButtonSave: TButton
-    Left = 10
-    Top = 176
-    Width = 178
-    Height = 25
-    Caption = 'Salvar imagem C:\temp2.bmp'
-    TabOrder = 3
-    OnClick = ButtonSaveClick
-  end
-  object CheckBox1: TCheckBox
-    Left = 11
-    Top = 136
-    Width = 218
-    Height = 17
-    Caption = 'Salvar imagem a cada altera'#231#227'o'
-    TabOrder = 4
-  end
   object ButtonSaveAs: TButton
-    Left = 10
-    Top = 202
+    Left = 8
+    Top = 108
     Width = 178
     Height = 25
-    Caption = 'Salvar imagem como... '
-    TabOrder = 5
+    Caption = 'Save as...'
+    TabOrder = 3
     OnClick = ButtonSaveAsClick
   end
   object SavePictureDialog1: TSavePictureDialog
